@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Property Sheet">
+      <UniqueIdentifier>{77b14e91-3d29-45a6-bb5f-79903a0f1ada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{0e944ec1-30c0-4f49-9063-65aff689b242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Build Events">
+      <UniqueIdentifier>{735256de-25d8-4f47-ac78-4424a1e45a62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpMgrPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMgrPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MgrPageDialogBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Toolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogHookMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Using a props file to set the path to the SDK.pdf">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="MastercamSDK.props">
+      <Filter>Property Sheet</Filter>
+    </None>
+    <None Include="Post-Build-InstallAddIn.bat">
+      <Filter>Build Events</Filter>
+    </None>
+    <None Include="Pre-Build-CheckFolder.bat">
+      <Filter>Build Events</Filter>
+    </None>
+    <None Include="OpMgrPage.pdf">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="The Pre and Post Build Events.pdf">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="TraceSolid.ft" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OpMgrPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMgrPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MgrPageDialogBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogHookMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpMgrPage.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icon16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OpManagerActionsToolbar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OpManagerActionsToolbar24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Icon32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

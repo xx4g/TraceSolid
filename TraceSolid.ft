@@ -1,0 +1,28 @@
+# Application name should be uniquely named
+# and be specific to your company and/or product.
+# 3rd party add-ons should NOT use "Mastercam" for this name!
+APPLICATION "TraceSolidApp"
+
+# The category for your C-Hook is what category your C-Hook will display 
+# under in the "Settings->Customize" dialog in Mastercam. 
+CATEGORY "Custom Operation Manager"
+
+# Point to the locations of the function and resource libraries.
+FUNC_DLL "chooks\TraceSolid.dll"
+RES_DLL  "chooks\TraceSolid.dll"
+
+# Specify the name of the entry point function,
+# the small and large icon (PNG) images for the C-Hook
+# as well as the tool tip resource ID.
+FUNCTION CPP "TraceSolidEntry"
+  SPNG 18001 
+  LPNG 18002
+  TIP  1
+  # Set as "hidden" so this does NOT show up in Settings->Customize
+  HIDDEN
+END_FUNCTION
+
+
+
+
+

@@ -1,0 +1,249 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Peter Evans"
+            VALUE "FileDescription", "ScriptManagerAddIn"
+            VALUE "FileVersion", "1, 0, 0, 2"
+            VALUE "InternalName", "ScriptManagerAddIn"
+            VALUE "LegalCopyright", "Copyright © Peter Evans 2020"
+            VALUE "LegalTrademarks", "Mastercam is a registered trademark of CNC Software, Inc."
+            VALUE "OriginalFilename", "ScriptManagerAddIn.DLL"
+            VALUE "ProductName", "Mastercam 2021"
+            VALUE "ProductVersion", "1.0.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MYMGRBAR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 210
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_FT_SMALL            PNG                     "res\\icon16.png"
+
+IDB_FT_LARGE            PNG                     "res\\icon32.png"
+
+IDR_TOOLBAR             PNG                     "res\\OpManagerActionsToolbar.png"
+
+IDR_TOOLBAR_24          PNG                     "res\\OpManagerActionsToolbar24.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_OPMGR_SELECT_ALL
+    BUTTON      ID_OPMGR_SELECT_DIRTY
+    SEPARATOR
+    BUTTON      ID_OPMGR_REGEN_SELECTED
+    BUTTON      ID_OPMGR_REGEN_DIRTY
+    SEPARATOR
+    BUTTON      ID_OPMGR_BACKPLOT
+    BUTTON      ID_OPMGR_VERIFY
+    BUTTON      ID_OPMGR_UBVS_OPTIONS
+    BUTTON      ID_OPMGR_POST
+    BUTTON      ID_OPMGR_HIFEED
+    SEPARATOR
+    BUTTON      ID_OPMGR_NEW
+    SEPARATOR
+    BUTTON      ID_OPMGR_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MYMGRBAR DIALOGEX 0, 0, 211, 264
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "MyMgrPage"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "C-Hook generated Manager Pane",IDC_STATIC1,23,27,168,8
+    CONTROL         "Option #1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,49,51,10
+    CONTROL         "Option #2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,63,52,10
+    EDITTEXT        IDC_EDIT1,79,47,110,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,79,63,110,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_INFOTIP | WS_BORDER | WS_HSCROLL | WS_TABSTOP,22,80,168,181
+    CONTROL         "",IDC_TOOLBAR_LOCATION,"Static",SS_GRAYRECT | NOT WS_VISIBLE,0,0,210,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MYMGRBAR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_FT_STRING           "TraceSolid Add-In"
+    IDS_FT_TITLE            "Trace Solid Manager"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPMGR_SELECT_ALL     "Select all operations"
+    ID_OPMGR_SELECT_DIRTY   "Select all dirty operations"
+    ID_OPMGR_REGEN_SELECTED "Regenerate all selected operations"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPMGR_REGEN_DIRTY    "Regenerate all dirty operations"
+    ID_OPMGR_BACKPLOT       "Backplot selected operations"
+    ID_OPMGR_VERIFY         "Verify selected operations"
+    ID_OPMGR_UBVS_OPTIONS   "Backplot/Verify options"
+    ID_OPMGR_POST           "Post selected operations"
+    ID_OPMGR_HIFEED         "Highfeed"
+    ID_OPMGR_NEW            "Delete all operations, groups and tools"
+    ID_OPMGR_HELP           "Help"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CHECKBOX_TIP_1      "Process Solid"
+    la                      "Create Quick  Plane"
+    IDS_TEXTBOX_TIP_1       "Textbox #1 data entry"
+    IDS_TEXTBOX_TIP_2       "Textbox #2 data entry"
+    IDS_TREE_TIP            "MFC Tree View"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

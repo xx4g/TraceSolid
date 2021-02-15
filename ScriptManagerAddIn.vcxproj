@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{27f40ce3-8a77-49c0-8953-f0d8aa3cfb86}</ProjectGuid>
+    <RootNamespace>ScriptManagerAddIn</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>TraceSolid</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MastercamSDK.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MastercamSDK.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">x64\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">x64\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">x64\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">x64\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SDKDir);$(SDKDir)interfaces\gui;$(SDKDir)interfaces\guibase;$(SDKDir)interfaces\corebase;$(SDKDir)interfaces\core;$(SDKDir)interfaces\control;$(SDKDir)interfaces\geomsld;$(SDKDir)interfaces\lathe;$(SDKDir)interfaces\machinedef;$(SDKDir)interfaces\mill;$(SDKDir)interfaces\post;$(SDKDir)interfaces\msurf;$(SDKDir)interfaces\wire;$(SDKDir)interfaces\uictrls;$(SDKDir)interfaces\tlcore;$(SDKDir)interfaces\tool;$(SDKDir)interfaces\math;$(SDKDir)interfaces\curvesurfgeom;$(SDKDir)interfaces\systypes;$(SDKDir)interfaces\bnci;$(SDKDir)interfaces\Observable;$(SDKDir)NGP\Core\gaf\base\misc\h;$(SDKDir)NGP\Core\h;$(SDKDir)3rdParty\BCGCBPro\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>mastercam.lib;mccore.lib;UICtrls.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SDKDir)x64\release;$(SDKDir)3rdParty\BCGCBPro\libx64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>call Post-Build-InstallAddIn.bat "$(MastercamDir)" "$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>call Pre-Build-CheckFolder.bat "$(SDKDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SDKDir);$(SDKDir)interfaces\gui;$(SDKDir)interfaces\guibase;$(SDKDir)interfaces\corebase;$(SDKDir)interfaces\core;$(SDKDir)interfaces\control;$(SDKDir)interfaces\geomsld;$(SDKDir)interfaces\lathe;$(SDKDir)interfaces\machinedef;$(SDKDir)interfaces\mill;$(SDKDir)interfaces\post;$(SDKDir)interfaces\msurf;$(SDKDir)interfaces\wire;$(SDKDir)interfaces\uictrls;$(SDKDir)interfaces\tlcore;$(SDKDir)interfaces\tool;$(SDKDir)interfaces\math;$(SDKDir)interfaces\curvesurfgeom;$(SDKDir)interfaces\systypes;$(SDKDir)interfaces\bnci;$(SDKDir)interfaces\Observable;$(SDKDir)NGP\Core\gaf\base\misc\h;$(SDKDir)NGP\Core\h;$(SDKDir)3rdParty\BCGCBPro\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>mastercam.lib;mccore.lib;UICtrls.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SDKDir)x64\release;$(SDKDir)3rdParty\BCGCBPro\libx64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>call Post-Build-InstallAddIn.bat "$(MastercamDir)" "$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>call Pre-Build-CheckFolder.bat "$(SDKDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DialogHookMgr.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MgrPageDialogBar.cpp" />
+    <ClCompile Include="MyMgrPage.cpp" />
+    <ClCompile Include="OpMgrPage.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Toolbar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MastercamSDK.props" />
+    <None Include="OpMgrPage.pdf" />
+    <None Include="Post-Build-InstallAddIn.bat" />
+    <None Include="Pre-Build-CheckFolder.bat" />
+    <None Include="TraceSolid.ft" />
+    <None Include="The Pre and Post Build Events.pdf" />
+    <None Include="Using a props file to set the path to the SDK.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DialogHookMgr.h" />
+    <ClInclude Include="MgrPageDialogBar.h" />
+    <ClInclude Include="MyMgrPage.h" />
+    <ClInclude Include="OpMgrPage.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Toolbar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpMgrPage.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icon16.png" />
+    <Image Include="res\Icon32.png" />
+    <Image Include="res\OpManagerActionsToolbar.png" />
+    <Image Include="res\OpManagerActionsToolbar24.png" />
+    <Image Include="res\Toolbar.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="OpMgrPage.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
