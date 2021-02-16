@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <!-- Path to the Mastercam C-Hook SDK -->
-    <SDKDir>C:\Program Files (x86)\Mastercam 2021\Mastercam\sdk\</SDKDir>
+    <SDKDir>C:\Program Files\Mastercam 2022\sdk\</SDKDir>
     <!-- Path to the Mastercam Product install -->
     <MastercamDir>C:\Program Files\Mcam2019\</MastercamDir>
   </PropertyGroup>

@@ -23,7 +23,7 @@
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -104,7 +104,7 @@
     </Midl>
     <ClCompile>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SDKDir);$(SDKDir)interfaces\gui;$(SDKDir)interfaces\guibase;$(SDKDir)interfaces\corebase;$(SDKDir)interfaces\core;$(SDKDir)interfaces\control;$(SDKDir)interfaces\geomsld;$(SDKDir)interfaces\lathe;$(SDKDir)interfaces\machinedef;$(SDKDir)interfaces\mill;$(SDKDir)interfaces\post;$(SDKDir)interfaces\msurf;$(SDKDir)interfaces\wire;$(SDKDir)interfaces\uictrls;$(SDKDir)interfaces\tlcore;$(SDKDir)interfaces\tool;$(SDKDir)interfaces\math;$(SDKDir)interfaces\curvesurfgeom;$(SDKDir)interfaces\systypes;$(SDKDir)interfaces\bnci;$(SDKDir)interfaces\Observable;$(SDKDir)NGP\Core\gaf\base\misc\h;$(SDKDir)NGP\Core\h;$(SDKDir)3rdParty\BCGCBPro\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SDKDir);$(SDKDir)interfaces\gui;$(SDKDir)interfaces\guibase;$(SDKDir)interfaces\corebase;$(SDKDir)interfaces\core;$(SDKDir)interfaces\control;$(SDKDir)interfaces\geomsld;$(SDKDir)interfaces\lathe;$(SDKDir)interfaces\machinedef;$(SDKDir)interfaces\mill;$(SDKDir)interfaces\post;$(SDKDir)interfaces\msurf;$(SDKDir)interfaces\wire;$(SDKDir)interfaces\uictrls;$(SDKDir)interfaces\tlcore;$(SDKDir)interfaces\tool;$(SDKDir)interfaces\math;$(SDKDir)interfaces\curvesurfgeom;$(SDKDir)interfaces\systypes;$(SDKDir)interfaces\bnci;$(SDKDir)interfaces\Observable;$(SDKDir)NGP\Core\gaf\base\misc\h;$(SDKDir)NGP\Core\h;$(SDKDir)3rdParty\BCGCBPro\src;$(SDKDir)\interfaces\CoreUtilities;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
