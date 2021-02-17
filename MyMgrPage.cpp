@@ -1430,29 +1430,31 @@ void Slice(double sliceDepth, double sliceIncAmount)
 					}
 				
 				
-				for (auto s = 1; s < 50; s++)
-				{
-					chain_tol = (.001 * s);
-					for (auto i = 0; i < sliceBndyParams2.boundaryEptrs.GetCount(); i++)
+					for (auto s = 1; s < 50; s++)
 					{
-						sel_bit_turn_on(sliceBndyParams2.boundaryEptrs[i]->eptr, SELECT_BIT);
-						write_ent_sel(sliceBndyParams2.boundaryEptrs[i]->eptr, sliceBndyParams2.boundaryEptrs[i]->eptr->eptr);
-					}
-					newchains = nullptr;
-
-
-					newchains = ChainAllSelected(true);
-					if (newchains != nullptr)
-					{
+						chain_tol = (.001 * s);
 						for (auto i = 0; i < sliceBndyParams2.boundaryEptrs.GetCount(); i++)
 						{
-							sel_bit_turn_on(sliceBndyParams2.boundaryEptrs[i]->eptr, BLANK_BIT);
+							sel_bit_turn_on(sliceBndyParams2.boundaryEptrs[i]->eptr, SELECT_BIT);
 							write_ent_sel(sliceBndyParams2.boundaryEptrs[i]->eptr, sliceBndyParams2.boundaryEptrs[i]->eptr->eptr);
 						}
+						newchains = nullptr;
 
-						break;
+
+						newchains = ChainAllSelected(true);
+
+
+						if (newchains != nullptr)
+						{
+							for (auto i = 0; i < sliceBndyParams2.boundaryEptrs.GetCount(); i++)
+							{
+								sel_bit_turn_on(sliceBndyParams2.boundaryEptrs[i]->eptr, BLANK_BIT);
+								write_ent_sel(sliceBndyParams2.boundaryEptrs[i]->eptr, sliceBndyParams2.boundaryEptrs[i]->eptr->eptr);
+							}
+
+							break;
+						}
 					}
-				}
 				}
 
 				auto eptrSplArr = MakeSplineFromChain(newchains, .005, OriginalCurves::Delete, 1, main_color, main_level);
@@ -1511,20 +1513,42 @@ void Slice(double sliceDepth, double sliceIncAmount)
 
 
 
-				for (auto q = 0; q < eptrSplArr.GetCount(); q++)
-				{
 
-					sel_bit_turn_on(eptrSplArr[q]->eptr, SELECT_BIT);
-					write_ent_sel(eptrSplArr[q]->eptr, eptrSplArr[q]->eptr->eptr);
+				CHAIN* finalchains = nullptr;
+
+				for (auto s = 1; s < 50; s++)
+				{
+					chain_tol = (.001 * s);
+
+					for (auto q = 0; q < eptrSplArr.GetCount(); q++)
+					{
+
+						sel_bit_turn_on(eptrSplArr[q]->eptr, SELECT_BIT);
+						write_ent_sel(eptrSplArr[q]->eptr, eptrSplArr[q]->eptr->eptr);
+					}
+
+					finalchains = nullptr;
+
+
+					finalchains = ChainAllSelected(true);
+
+
+					if (finalchains != nullptr)
+					{
+
+						for (auto q = 0; q < eptrSplArr.GetCount(); q++)
+						{
+
+							sel_bit_turn_on(eptrSplArr[q]->eptr, BLANK_BIT);
+							write_ent_sel(eptrSplArr[q]->eptr, eptrSplArr[q]->eptr->eptr);
+						}
+
+
+						break;
+					}
 				}
 
 
-
-
-
-
-
-				auto finalchains = ChainAllSelected(true);
 
 				if (number_of_chains(finalchains) >= 1)
 				{
@@ -1574,7 +1598,7 @@ void Slice(double sliceDepth, double sliceIncAmount)
 
 				}
 
-					free_chains(&finalchains);
+			    free_chains(&finalchains);
 				for (auto q = 0; q < eptrSplArr.GetCount(); q++)
 				{
 
